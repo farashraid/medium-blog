@@ -33,6 +33,7 @@ const initialSlides = (images: ReactNode[]): Slide[] => {
  */
 const useSlideRotation = (args: {autoplay?: boolean, interval: number, images: ReactNode[]}) => {
   const { interval = 1000, autoplay, images } = args;
+  // console.log(JSON.stringify(images))
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const [slides, setSlides] = useState(initialSlides.bind(null, images));
   const intervalRef = useRef<number>();

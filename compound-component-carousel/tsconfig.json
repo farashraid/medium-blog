@@ -5,6 +5,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
+    "types": ["vite/client", "jest"],
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -20,6 +21,8 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src"],
+  "exclude": ["node_modules", "dist", "build", "temp", "coverage"],
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.tsx"],
+  // "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
