@@ -10,7 +10,7 @@ type SliderArrowProps = { direction: "left" | "right"; onSlide: VoidFunction; sh
 const SlideArrow = forwardRef<HTMLDivElement, SliderArrowProps>((props, ref) => {
   const { direction, onSlide, show } = props;
   return (
-    <div className={`slider-${direction}`} onClick={onSlide} ref={ref} style={{ display: show ? "" : "none" }}>
+    <div className={`slider-${direction}`} data-testid={`${direction}-arrow`} onClick={onSlide} ref={ref} style={{ display: show ? "" : "none" }}>
       <div>
         <FontAwesomeIcon size="lg" icon={direction === "left" ? faArrowLeft : faArrowRight} />
       </div>

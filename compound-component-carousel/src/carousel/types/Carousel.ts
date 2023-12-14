@@ -16,7 +16,7 @@ export type SlidesProps = {
 };
 
 export type CarouselProps = {
-  children: ReactNode;
+  children?: ReactNode;
   images: ReactNode[];
   autoplay?: boolean;
   interval?: number;
